@@ -13,7 +13,29 @@
 		1C1FC84725594AAA007E09DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC84525594AAA007E09DE /* Main.storyboard */; };
 		1C1FC84925594AAC007E09DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC84825594AAC007E09DE /* Assets.xcassets */; };
 		1C1FC84C25594AAC007E09DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC84A25594AAC007E09DE /* LaunchScreen.storyboard */; };
+		1C1FC85525594FED007E09DE /* KorgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1FC85425594FED007E09DE /* KorgeViewController.swift */; };
+		1C1FC85A255951E8007E09DE /* GLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1FC859255951E8007E09DE /* GLHelper.m */; };
+		1C1FC85D2559525A007E09DE /* GLContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1FC85C2559525A007E09DE /* GLContext.swift */; };
+		1C1FC86625595C4F007E09DE /* korge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC86525595C4F007E09DE /* korge.png */; };
+		1C1FC86825595D37007E09DE /* football.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC86725595D37007E09DE /* football.mp4 */; };
+		1C1FC86A25595D40007E09DE /* football-small.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC86925595D40007E09DE /* football-small.mp4 */; };
+		1C1FC87125597C26007E09DE /* GameMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1FC8602559531A007E09DE /* GameMain.framework */; };
+		1C1FC87225597C26007E09DE /* GameMain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1FC8602559531A007E09DE /* GameMain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C1FC87325597C26007E09DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1C1FC87225597C26007E09DE /* GameMain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1C1FC83C25594AAA007E09DE /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +46,16 @@
 		1C1FC84825594AAC007E09DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C1FC84B25594AAC007E09DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C1FC84D25594AAC007E09DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C1FC85425594FED007E09DE /* KorgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KorgeViewController.swift; sourceTree = "<group>"; };
+		1C1FC857255951E8007E09DE /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		1C1FC858255951E8007E09DE /* GLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
+		1C1FC859255951E8007E09DE /* GLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLHelper.m; sourceTree = "<group>"; };
+		1C1FC85C2559525A007E09DE /* GLContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLContext.swift; sourceTree = "<group>"; };
+		1C1FC8602559531A007E09DE /* GameMain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameMain.framework; path = ../KorgeRenderer/build/bin/iosX64/debugFramework/GameMain.framework; sourceTree = "<group>"; };
+		1C1FC86525595C4F007E09DE /* korge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = korge.png; path = ../../KorgeRenderer/build/combinedResources/resources/korge.png; sourceTree = "<group>"; };
+		1C1FC86725595D37007E09DE /* football.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = football.mp4; sourceTree = "<group>"; };
+		1C1FC86925595D40007E09DE /* football-small.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "football-small.mp4"; sourceTree = "<group>"; };
+		1C1FC86C255972BE007E09DE /* GameMain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameMain.framework; path = ../KorgeRenderer/build/bin/iosArm64/debugFramework/GameMain.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1FC87125597C26007E09DE /* GameMain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +73,10 @@
 		1C1FC83325594AAA007E09DE = {
 			isa = PBXGroup;
 			children = (
+				1C1FC86425595C19007E09DE /* assets */,
 				1C1FC83E25594AAA007E09DE /* SampleApp */,
 				1C1FC83D25594AAA007E09DE /* Products */,
+				1C1FC85F2559531A007E09DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +94,36 @@
 				1C1FC83F25594AAA007E09DE /* AppDelegate.swift */,
 				1C1FC84125594AAA007E09DE /* SceneDelegate.swift */,
 				1C1FC84325594AAA007E09DE /* ViewController.swift */,
+				1C1FC85425594FED007E09DE /* KorgeViewController.swift */,
+				1C1FC85C2559525A007E09DE /* GLContext.swift */,
+				1C1FC858255951E8007E09DE /* GLHelper.h */,
+				1C1FC859255951E8007E09DE /* GLHelper.m */,
 				1C1FC84525594AAA007E09DE /* Main.storyboard */,
 				1C1FC84825594AAC007E09DE /* Assets.xcassets */,
 				1C1FC84A25594AAC007E09DE /* LaunchScreen.storyboard */,
 				1C1FC84D25594AAC007E09DE /* Info.plist */,
+				1C1FC857255951E8007E09DE /* SampleApp-Bridging-Header.h */,
+				1C1FC86725595D37007E09DE /* football.mp4 */,
+				1C1FC86925595D40007E09DE /* football-small.mp4 */,
 			);
 			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		1C1FC85F2559531A007E09DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C1FC86C255972BE007E09DE /* GameMain.framework */,
+				1C1FC8602559531A007E09DE /* GameMain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C1FC86425595C19007E09DE /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				1C1FC86525595C4F007E09DE /* korge.png */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +136,7 @@
 				1C1FC83825594AAA007E09DE /* Sources */,
 				1C1FC83925594AAA007E09DE /* Frameworks */,
 				1C1FC83A25594AAA007E09DE /* Resources */,
+				1C1FC87325597C26007E09DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -98,6 +158,7 @@
 				TargetAttributes = {
 					1C1FC83B25594AAA007E09DE = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 				};
 			};
@@ -124,7 +185,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1FC86625595C4F007E09DE /* korge.png in Resources */,
 				1C1FC84C25594AAC007E09DE /* LaunchScreen.storyboard in Resources */,
+				1C1FC86A25595D40007E09DE /* football-small.mp4 in Resources */,
+				1C1FC86825595D37007E09DE /* football.mp4 in Resources */,
 				1C1FC84925594AAC007E09DE /* Assets.xcassets in Resources */,
 				1C1FC84725594AAA007E09DE /* Main.storyboard in Resources */,
 			);
@@ -137,9 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1FC85D2559525A007E09DE /* GLContext.swift in Sources */,
 				1C1FC84425594AAA007E09DE /* ViewController.swift in Sources */,
 				1C1FC84025594AAA007E09DE /* AppDelegate.swift in Sources */,
+				1C1FC85A255951E8007E09DE /* GLHelper.m in Sources */,
 				1C1FC84225594AAA007E09DE /* SceneDelegate.swift in Sources */,
+				1C1FC85525594FED007E09DE /* KorgeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +353,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2W4M4RMYJ;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../KorgeRenderer/build/bin/iosX64/debugFramework";
 				INFOPLIST_FILE = SampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rohansanap.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.invideo.POC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleApp/SampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,14 +378,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2W4M4RMYJ;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../KorgeRenderer/build/bin/iosX64/debugFramework";
 				INFOPLIST_FILE = SampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rohansanap.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.invideo.POC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleApp/SampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
