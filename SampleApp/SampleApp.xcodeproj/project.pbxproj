@@ -19,18 +19,18 @@
 		1C1FC86625595C4F007E09DE /* korge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC86525595C4F007E09DE /* korge.png */; };
 		1C1FC86825595D37007E09DE /* football.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC86725595D37007E09DE /* football.mp4 */; };
 		1C1FC86A25595D40007E09DE /* football-small.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1C1FC86925595D40007E09DE /* football-small.mp4 */; };
-		1C1FC87125597C26007E09DE /* GameMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1FC8602559531A007E09DE /* GameMain.framework */; };
-		1C1FC87225597C26007E09DE /* GameMain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1FC8602559531A007E09DE /* GameMain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1CE9685F255A52D800BBFD43 /* GameMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1FC8602559531A007E09DE /* GameMain.framework */; };
+		1CE96860255A52D800BBFD43 /* GameMain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1FC8602559531A007E09DE /* GameMain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1C1FC87325597C26007E09DE /* Embed Frameworks */ = {
+		1CE96861255A52D800BBFD43 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C1FC87225597C26007E09DE /* GameMain.framework in Embed Frameworks */,
+				1CE96860255A52D800BBFD43 /* GameMain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1FC87125597C26007E09DE /* GameMain.framework in Frameworks */,
+				1CE9685F255A52D800BBFD43 /* GameMain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 				1C1FC83825594AAA007E09DE /* Sources */,
 				1C1FC83925594AAA007E09DE /* Frameworks */,
 				1C1FC83A25594AAA007E09DE /* Resources */,
-				1C1FC87325597C26007E09DE /* Embed Frameworks */,
+				1CE96861255A52D800BBFD43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     return vc
   }()
   
-  let asset = AVAsset(url: Bundle.main.url(forResource: "football-small", withExtension: "mp4")!)
+  let asset = AVAsset(url: Bundle.main.url(forResource: "football", withExtension: "mp4")!)
   lazy var playerItem = AVPlayerItem(asset: asset)
   lazy var player = AVPlayer(playerItem: playerItem)
   
@@ -33,6 +33,12 @@ class ViewController: UIViewController {
   var textureCache: CVOpenGLESTextureCache?
   
   var currentPixelBuffer: CVPixelBuffer?
+  
+  lazy var displayLink: CADisplayLink = {
+    let link = CADisplayLink(target: self, selector: #selector(displayLinkTrigger(_:)))
+    link.add(to: .main, forMode: .common)
+    return link
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,6 +49,8 @@ class ViewController: UIViewController {
     
     let err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, nil, context, nil, &textureCache)
     if err != noErr { fatalError("Error - \(err)") }
+    
+    displayLink.isPaused = true
   }
   
   func setupKorgeVCChild() {
@@ -59,8 +67,37 @@ class ViewController: UIViewController {
   }
 
   @IBAction func buttonTapped(_ sender: UIButton) {
-    MainKt.mayank = getNativeImage
+//    MainKt.mayank = getNativeImage
+//    player.play()
+
+    displayLink.isPaused = false
     player.play()
+  }
+  
+  func getNativeImage() -> RSNativeImage? {
+    guard let pixelBuffer = checkAndGetPixelBuffer(time: CACurrentMediaTime()) else { return nil }
+    guard let texture = generateTextureAndGetInfo(from: pixelBuffer) else { return nil }
+    
+    let rsNativeImage = RSNativeImage(width: Int32(texture.width),
+                                      height: Int32(texture.height),
+                                      name2: texture.id,
+                                      target2: KotlinInt(int: Int32(texture.target)))
+    
+    return rsNativeImage
+  }
+  
+  var counter = 0
+  @objc func displayLinkTrigger(_ sender: CADisplayLink) {
+//    if counter % 2 == 0 {
+      let nextOutputTime = sender.timestamp + sender.duration
+      guard let pixelBuffer = checkAndGetPixelBuffer(time: nextOutputTime) else { return }
+      guard let texture = generateTextureAndGetInfo(from: pixelBuffer) else { return }
+      MainKt.updateTexture(name: texture.id,
+                           width: Int32(texture.width),
+                           height: Int32(texture.height),
+                           target: KotlinInt(int: Int32(texture.target)))
+//    }
+    counter += 1
   }
   
   func getRGBATexture(for pixelBuffer: CVPixelBuffer) -> CVOpenGLESTexture? {
@@ -88,18 +125,6 @@ class ViewController: UIViewController {
     }
     
     return texture
-  }
-  
-  func getNativeImage() -> RSNativeImage? {
-    guard let pixelBuffer = checkAndGetPixelBuffer(time: CACurrentMediaTime()) else { return nil }
-    guard let texture = generateTextureAndGetInfo(from: pixelBuffer) else { return nil }
-    
-    let rsNativeImage = RSNativeImage(width: Int32(texture.width),
-                                      height: Int32(texture.height),
-                                      name2: texture.id,
-                                      target2: KotlinInt(int: Int32(texture.target)))
-    
-    return rsNativeImage
   }
   
   func checkAndGetPixelBuffer(time: CFTimeInterval) -> CVPixelBuffer? {
